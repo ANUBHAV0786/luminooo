@@ -20,4 +20,6 @@ from django.urls import path, include  # added include after putting comma
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('main.urls')), # include the urls from the main app #this line is new and created in this step
+    path ('api-auth/', include('rest_framework.urls')) # added in step 7 , this will show us the login link also at our localhost/api/techer this will allow us to use the browsable API and authentication features of the Django REST framework
+
 ]
